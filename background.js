@@ -32,7 +32,7 @@ var url = "https://api.dictionaryapi.dev/api/v2/entries/en/";
 
 
 
-element.addEventListener("mouseover", event => {
+element.addEventListener("click", event => {
 getMeaning()
 const selectedletter =  event.target.getAttribute("letters");
 if(selectedletter){
@@ -57,7 +57,7 @@ if(selectedletter){
     header.style.marginTop = "-20px";
     header.style.borderRadius = "5px";
     header.style.border = "1px solid black";
-    header.style.fontSize = "20px";
+    header.style.fontSize = "14px";
     header.style.color = "black";
     header.style.fontWeight = "bold";
     header.style.textAlign = "center";

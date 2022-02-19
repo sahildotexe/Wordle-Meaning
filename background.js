@@ -32,7 +32,7 @@ var url = "https://api.dictionaryapi.dev/api/v2/entries/en/";
 
 
 
-element.addEventListener("click", event => {
+element.addEventListener("mouseover", event => {
 getMeaning()
 const selectedletter =  event.target.getAttribute("letters");
 if(selectedletter){
@@ -41,9 +41,12 @@ if(selectedletter){
         var wordMeaning = selectedword[0].meaning;  
     }
     if(wordMeaning){
+    if (document.contains(document.getElementById("mean"))) {
+            document.getElementById("mean").remove();} 
     var header = document.createElement('h1');
+
     document.body.appendChild(header);
-    header.setAttribute("id", "word-meaning");
+    header.setAttribute("id", "mean");
     header.innerHTML = wordMeaning;
     header.style.position = "absolute";
     header.style.top = event.clientY + "px";
@@ -51,6 +54,7 @@ if(selectedletter){
     header.style.zIndex = "1";
     header.style.backgroundColor = "white";
     header.style.padding = "10px";
+    header.style.marginTop = "-20px";
     header.style.borderRadius = "5px";
     header.style.border = "1px solid black";
     header.style.fontSize = "20px";

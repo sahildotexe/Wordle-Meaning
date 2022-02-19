@@ -47,7 +47,10 @@ if(selectedletter){
 
     document.body.appendChild(header);
     header.setAttribute("id", "mean");
-    header.innerHTML = wordMeaning;
+    header.innerHTML = `
+    <p style="text-transform:capitalize;font-weight:bold" >${selectedword[0].word}  </p>
+    <p>${wordMeaning}</p>
+    `;
     header.style.position = "absolute";
     header.style.top = event.clientY + "px";
     header.style.left = event.clientX + "px";
@@ -59,7 +62,7 @@ if(selectedletter){
     header.style.border = "1px solid black";
     header.style.fontSize = "14px";
     header.style.color = "black";
-    header.style.fontWeight = "bold";
+    header.style.fontWeight = "normal";
     header.style.textAlign = "center";
     document.body.replaceChild(header,header);
 

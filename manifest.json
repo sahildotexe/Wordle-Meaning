@@ -1,0 +1,21 @@
+{
+    "manifest_version": 2,
+    "name": "Wordle-Meaning",
+    "version": "1.0",
+    "description": "Wordle-Meaning",
+    "permissions": [
+        "tabs",
+        "storage",
+        "contextMenus",
+        "webNavigation",
+        "webRequest",
+        "webRequestBlocking",
+        "background"
+    ],
+    "content_scripts": [
+        {
+            "matches": ["https://www.nytimes.com/games/wordle/index.html"],
+            "js": ["background.js"]
+        }
+    ]
+}
